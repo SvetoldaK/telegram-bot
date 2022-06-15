@@ -11,6 +11,15 @@
   </head>
 
   <body>
+    <p><%=t '.name'%></p>
+
+    <% if I18n.locale == :ru %>
+      <%= link_to t('.eng'), { :locale=>'en' } %>
+    <% else %>
+      <%= link_to t('.rus'), { :locale=>'ru' } %>
+    <%end%>
+
+    
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 

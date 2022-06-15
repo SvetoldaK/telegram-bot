@@ -1,17 +1,17 @@
 <%= form_with model: @user do |form| %>
 
   <div>
-    <%= form.label :token %><br>
+    <%= form.label t('.token') %><br>
     <%= form.text_field :token %>
   </div>
 
   <div>
-    <%= form.label :group%><br>
+    <%= form.label t('.group')%><br>
     <%= form.text_field :group %><br>
   </div>
 
   <div>
-    <%= form.submit 'synchronization'%>
+    <%= form.submit t('.synchronization')%>
   </div>
 
 <% end %>

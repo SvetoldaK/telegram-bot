@@ -1,33 +1,94 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   "true": "foo"
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  users:
+    confirmations:
+      new:
+        email: Email
+        resending_instructions: Resend confirmation instructions
+    mailer:
+      confirmation_instructions:
+        title: Welcome
+        body: "You can confirm your account email through the link below:"
+        confirm_account: Confirm my account
+      email_changed:
+        title: Hello
+        body: We're contacting you to notify you that your email has been changed to
+      password_change:
+        title: Hello
+        body: We're contacting you to notify you that your password has been changed.
+      reset_password_instructions:
+        title: Hello
+        body_change: Someone has requested a link to change your password. You can do this through the link below.
+        change_password: Change my password
+        body_ignor: If you didn't request this, please ignore this email.
+        body_warning: Your password won't change until you access the link above and create a new one.
+      unlock_instructions:
+        title: Hello
+        body_lock: Your account has been locked due to an excessive number of unsuccessful sign in attempts.
+        body_unlock: "Click the link below to unlock your account:"
+        unlock: Unlock my account
+    sessions:
+      new:
+        sign_in: Sign In
+        log_in: Log In
+        email: Email
+        password: Password
+        remember_me: Remember me
+    registrations:
+      new:
+        title: Sign Up
+        email: Email
+        password: Password
+        min_size: characters minimum
+        password_confirmation: Password_confirmation
+        sign_up: Sign Up
+      edit:
+        title: Edit
+        email: Email
+        password: Password
+        min_size: characters minimum
+        password_confirmation: Password_confirmation
+        waiting: "Currently waiting confirmation for: "
+        empty: "(leave blank if you don't want to change it)"
+        current_password: "(we need your current password to confirm your changes)"
+        update: Update
+        cancel: Cancel my account
+        unhappy: Unhappy?
+        sure: Are you sure?
+        back: Back
+    passwords:
+      new:
+        email: Email
+        title: Forgot your password?
+        send_message: Send me reset password instructions
+      edit:
+        title: Change your password
+        password: New password
+        password_confirmation: Confirm new password
+        min_size: characters minimum
+        change_password: Change my password
+    shared:
+      links:
+        log_in: Log In
+        sign_up: Sign Up
+        password: Forgot your password?
+        instruction_confirmation: Didn't receive confirmation instructions?
+      error_messages:
+    unlocks:
+      new:
+        unlock: Resend unlock instructions
+        email: Email
+  layouts:
+    application:
+      name: Germes
+      eng: English
+      rus: Russia
+      sign_out: Sign Out
+      sign_in: Sign In
+      sign_Up: Sign Up
+  home:
+    form:
+      token: Token
+      group: Group
+      synchronization: Synchronization
+    subgroup:
+      subgroup: Subgroup

@@ -1,0 +1,94 @@
+ru:
+  users:
+    confirmations:
+      new:
+        email: Почта
+        resending_instructions: Отправить инструкцию повторно
+    mailer:
+      confirmation_instructions:
+        title: Здравствуйте
+        body: "Вы можете подтвердить адрес электронной почты своей учетной записи по ссылке ниже: "
+        confirm_account: Подтвердить аккаунт
+      email_changed:
+        title: Здравствуйте
+        body: Мы связываемся с вами, чтобы уведомить вас о том, что ваш адрес электронной почты был изменен на
+      password_change:
+        title: Здравствуйте
+        body: Мы связываемся с вами, чтобы сообщить, что ваш пароль был изменен.
+      reset_password_instructions:
+        title: Здравствуйте
+        body_change: Кто-то запросил ссылку для смены пароля. Вы можете сделать это по ссылке ниже.
+        change_password: Изменить пароль
+        body_ignor: Если вы этого не запрашивали, проигнорируйте это письмо.
+        body_warning: Ваш пароль не изменится, пока вы не перейдете по ссылке выше и не создадите новый.
+      unlock_instructions:
+        title: Здравствуйте
+        body_lock: Ваша учетная запись заблокирована из-за чрезмерного количества неудачных попыток входа.
+        body_unlock: "Нажмите на ссылку ниже, чтобы разблокировать свою учетную запись:"
+        unlock: Разблокировать аккаунт
+    sessions:
+      new:
+        sign_in: Войти
+        log_in: Войти
+        email: Почта
+        password: Пароль
+        remember_me: Запомнить меня
+    registrations:
+      new:
+        title: Регистрация
+        email: Почта
+        password: Пароль
+        min_size: символов минимум
+        password_confirmation: Подтверждение пароля
+        sign_up: Зарегестрироваться
+      edit:
+        title: Редактировать
+        email: Почта
+        password: Пароль
+        min_size: символов минимум
+        password_confirmation: Подтверждение пароля
+        waiting: "В настоящее время ожидание подтверждения для: "
+        empty: "(оставьте пустым, если не хотите его менять)"
+        current_password: "(нам нужен ваш текущий пароль, чтобы подтвердить ваши изменения)"
+        update: Обновить
+        cancel: Отменить мою учетную запись
+        unhappy: Неудачно?
+        sure: Уверены ли вы?
+        back: Назад
+    passwords:
+      new:
+        email: Почта
+        title: Забыли пароль?
+        send_message: Отправить инструкцию по восстановлению пароля
+      edit:
+        title: Изменение пароля
+        password: Новый пароль
+        password_confirmation: Подстверждение нового пароля
+        min_size: символов минимум
+        change_password: Изменить пароль
+    shared:
+      links:
+        log_in: Войти
+        sign_up: Зарегестрироваться
+        password: Забыли пароль?
+        instruction_confirmation: Не подтверждена почта?
+    unlocks:
+      new:
+        unlock: Повторно отправить инструкции по разблокировке
+        email: Почта
+  layouts:
+    application:
+      name: Гермес
+      eng: Английский
+      rus: Русский
+      sign_out: Выйти
+      sign_in: Войти
+      sign_up: Зарегестрироваться
+  home:
+    form:
+      token: Токен
+      group: Группа
+      synchronization: Синхронизация
+    subgroup:
+      subgroup: Подгруппа
+
