@@ -7,6 +7,8 @@ ruby '3.1.0'
 
 gem 'rubocop'
 
+gem 'devise'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.3'
 
@@ -58,6 +60,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'letter_opener'
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
 
