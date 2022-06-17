@@ -77,6 +77,10 @@ en:
       new:
         unlock: Resend unlock instructions
         email: Email
+    form:
+      token: Token
+      group: Group
+      synchronization: Synchronization
   layouts:
     application:
       name: Germes
@@ -85,10 +89,8 @@ en:
       sign_out: Sign Out
       sign_in: Sign In
       sign_Up: Sign Up
-  home:
-    form:
-      token: Token
-      group: Group
-      synchronization: Synchronization
-    subgroup:
+  subgroup:
+    form: 
+      name: Name
       subgroup: Subgroup
+      nickname: Nickname

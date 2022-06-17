@@ -76,6 +76,10 @@ ru:
       new:
         unlock: Повторно отправить инструкции по разблокировке
         email: Почта
+    form:
+      token: Токен
+      group: Группа
+      synchronization: Синхронизация
   layouts:
     application:
       name: Гермес
@@ -84,11 +88,9 @@ ru:
       sign_out: Выйти
       sign_in: Войти
       sign_up: Зарегестрироваться
-  home:
+  subgroup:
     form:
-      token: Токен
-      group: Группа
-      synchronization: Синхронизация
-    subgroup:
+      name: Имя
       subgroup: Подгруппа
+      nickname: Никнейм
 
