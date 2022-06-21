@@ -89,6 +89,9 @@ ru:
       sign_in: Войти
       sign_up: Зарегестрироваться
   subgroup:
+    subgroup:
+        delete: Удалить
+        sure: Вы уверены?
     form:
       name: Имя
       subgroup: Подгруппа

@@ -90,6 +90,9 @@ en:
       sign_in: Sign In
       sign_Up: Sign Up
   subgroup:
+    subgroup:
+      delete: Delete
+      sure: Are you sure?
     form: 
       name: Name
       subgroup: Subgroup
