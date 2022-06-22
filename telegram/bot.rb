@@ -13,14 +13,13 @@ Telegram::Bot::Client.run(token) do |bot|
     else
       Message.create(telegram_id: message.from.id, first_name: message.from.first_name)
     end
-    message.inspect
 
     # rubocop:disable Style/RegexpLiteral
     command, text = message.text.match(/\/(\S+)\s*(.*)/)&.captures
     # rubocop:enable Style/RegexpLiteral
 
     # rubocop:disable
-    if message.class.to_s == Telegram::Bot::Types::ChatMemberUpdated.to_s
+    if message.is_a?(Telegram::Bot::Types::ChatMemberUpdated)
     # rubocop:enable
     else
       case command
