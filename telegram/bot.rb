@@ -25,8 +25,10 @@ Telegram::Bot::Client.run(token) do |bot|
       case command
       when 'start'
         bot.api.send_message(chat_id: message.chat.id, text: "Привет, #{message.from.first_name}")
-      when 'all'
-        bot.api.send_message(chat_id: message.chat.id, text: "#{Subgroup.find_by(name: 'all').nickname} #{text}")
+      when command
+        if Subgroup.find_by(name: command)
+          bot.api.send_message(chat_id: message.chat.id, text: "#{Subgroup.find_by(name: command).nickname} #{text}")
+        end
       end
     end
   end
