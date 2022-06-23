@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     shared: 'users/shared'
   }
 
-  resources :users, path: '', param: :id do
+  resources :users do
     resources :subgroup
   end
 

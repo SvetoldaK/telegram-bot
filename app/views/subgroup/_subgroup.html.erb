@@ -3,5 +3,6 @@
     <p><%= "#{subgroup.name}" %></p>
     <%= link_to t('.delete'), user_subgroup_path(subgroup.user.id, subgroup),
       method: :delete, data: { turbo_method: 'delete', turbo_confirm: t('.sure')}%>
+    <li><%= link_to t('.edit'), edit_user_subgroup_path(@user, subgroup.id) %></li>
  <%end%>
 </div>

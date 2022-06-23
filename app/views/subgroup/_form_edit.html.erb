@@ -1,0 +1,22 @@
+<%= form_with model: @subgroup, url: user_subgroup_path(@subgroup.user_id, @subgroup) do |form| %>
+  <div>
+    <%= form.label t('.name') %><br>
+    <%= form.text_field :name %><br>
+    <% @subgroup.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label t('.nickname') %><br>
+    <%= form.text_area :nickname %><br>
+    <% @subgroup.errors.full_messages_for(:nickname).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit t('.subgroup')%>
+  </div>
+  
+<% end %>

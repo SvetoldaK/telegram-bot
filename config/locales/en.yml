@@ -77,10 +77,8 @@ en:
       new:
         unlock: Resend unlock instructions
         email: Email
-    form:
-      token: Token
-      group: Group
-      synchronization: Synchronization
+    show:
+      new_subgroup: New subgroup
   layouts:
     application:
       name: Germes
@@ -92,8 +90,13 @@ en:
   subgroup:
     subgroup:
       delete: Delete
+      edit: Edit
       sure: Are you sure?
     form: 
+      name: Name
+      subgroup: Subgroup
+      nickname: Nickname
+    form_edit: 
       name: Name
       subgroup: Subgroup
       nickname: Nickname

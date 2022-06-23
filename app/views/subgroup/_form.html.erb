@@ -1,4 +1,5 @@
-<%= form_with model: @subgroup, url: user_subgroup_index_path(@user.id) do |form| %>
+<%= form_with model: @subgroup, url: user_subgroup_index_path(current_user.id) do |form| %>
+
   <div>
     <%= form.label t('.name') %><br>
     <%= form.text_field :name %><br>

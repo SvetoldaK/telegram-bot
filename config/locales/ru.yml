@@ -76,10 +76,8 @@ ru:
       new:
         unlock: Повторно отправить инструкции по разблокировке
         email: Почта
-    form:
-      token: Токен
-      group: Группа
-      synchronization: Синхронизация
+    show:
+      new_subgroup: Новая подгруппа
   layouts:
     application:
       name: Гермес
@@ -91,8 +89,13 @@ ru:
   subgroup:
     subgroup:
         delete: Удалить
+        edit: Редактировать
         sure: Вы уверены?
     form:
+      name: Имя
+      subgroup: Подгруппа
+      nickname: Никнейм
+    form_edit:
       name: Имя
       subgroup: Подгруппа
       nickname: Никнейм
