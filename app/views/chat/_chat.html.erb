@@ -1,0 +1,5 @@
+<div>
+ <% @user.chats.each do |chat| %>
+    <p><%= link_to chat.name, user_chat_path(@user, chat.id) %></p>
+ <%end%>
+</div>

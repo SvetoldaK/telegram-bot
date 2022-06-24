@@ -1,0 +1,9 @@
+<%= current_user.email %><br></p>
+<p><%= "#{@chat.name}" %></p>
+<%= link_to t('.back'), user_path(current_user.id) %>
+<%= link_to t('.delete'), user_chat_path(@chat.user.id, @chat),
+  method: :delete, data: { turbo_method: 'delete', turbo_confirm: t('.sure')}%>
+<%= link_to t('.edit'), edit_user_chat_path(current_user.id, @chat.id) %>
+<%= t('.title')%>
+<%= link_to t('.new_group'), new_user_chat_group_path(current_user.id, @chat.id) %>
+<%= render 'group/group' %>

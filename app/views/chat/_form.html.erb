@@ -1,0 +1,17 @@
+<%= form_with model: @chat, url: user_chat_index_path(current_user.id) do |form| %>
+
+  <div>
+    <%= form.label t('.name') %><br>
+    <%= form.text_field :name %><br>
+  </div>
+
+  <div>
+    <%= form.label t('.id') %><br>
+    <%= form.text_area :chat_id %><br>
+  </div>
+
+  <div>
+    <%= form.submit t('.chat')%>
+  </div>
+  
+<% end %>

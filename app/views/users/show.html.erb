@@ -1,3 +1,4 @@
 <%= current_user.email %><br></p>
-<%= link_to t('.new_subgroup'), new_user_subgroup_path(@user) %>
-<%= render 'subgroup/subgroup' %>
+<%= t('.list')%>
+<%= link_to t('.new_chat'), new_user_chat_path(@user) %>
+<%= render 'chat/chat' %>

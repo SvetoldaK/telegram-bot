@@ -1,0 +1,5 @@
+<div>
+ <% @chat.groups.each do |group| %>
+    <p><%= link_to "#{group.name}", user_chat_group_path(current_user.id, @chat.id, group.id) %></p>
+ <%end%>
+</div>

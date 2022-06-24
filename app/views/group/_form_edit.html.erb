@@ -1,0 +1,27 @@
+<%= form_with model: @group, url: user_chat_group_path(current_user.id, chat.id, @group.id) do |form| %>
+  
+  <div class="field">
+    <%= form.hidden_field :chat_id, value: chat.id %>
+  </div>
+
+  <div>
+    <%= form.label t('.name') %><br>
+    <%= form.text_field :name %><br>
+    <% @group.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label t('.nickname') %><br>
+    <%= form.text_area :nickname %><br>
+    <% @group.errors.full_messages_for(:nickname).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit t('.group')%>
+  </div>
+  
+<% end %>

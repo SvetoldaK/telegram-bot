@@ -13,7 +13,9 @@ Rails.application.routes.draw do
   }
 
   resources :users do
-    resources :subgroup
+    resources :chat do 
+      resources :group
+    end
   end
 
 end

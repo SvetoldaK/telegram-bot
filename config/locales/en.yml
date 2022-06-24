@@ -78,7 +78,8 @@ en:
         unlock: Resend unlock instructions
         email: Email
     show:
-      new_subgroup: New subgroup
+      new_chat: New chat
+      list: Chat list
   layouts:
     application:
       name: Germes
@@ -87,16 +88,45 @@ en:
       sign_out: Sign Out
       sign_in: Sign In
       sign_Up: Sign Up
-  subgroup:
-    subgroup:
-      delete: Delete
-      edit: Edit
-      sure: Are you sure?
+  group:
+    group:
     form: 
       name: Name
-      subgroup: Subgroup
+      group: New group
       nickname: Nickname
     form_edit: 
       name: Name
-      subgroup: Subgroup
+      group: Edit group
       nickname: Nickname
+    show:
+      back: Back
+      command: Command name
+      nickname: Nickname
+      delete: Delete
+      edit: Edit
+      sure: Are you sure?
+    new: 
+      title: New group
+    edit:
+      title: Edit group
+  chat:
+    chat:
+    form: 
+      name: Name
+      id: Telegram id
+      chat: New chat
+    form_edit: 
+      name: Name
+      id: Telegram id
+      chat: New chat
+    show:
+      back: Back
+      new_group: New group
+      title: Group list
+      delete: Delete
+      edit: Edit
+      sure: Are you sure?
+    new: 
+      title: New chat
+    edit:
+      title: Edit chat

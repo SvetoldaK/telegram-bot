@@ -77,7 +77,8 @@ ru:
         unlock: Повторно отправить инструкции по разблокировке
         email: Почта
     show:
-      new_subgroup: Новая подгруппа
+      new_chat: Новый чат
+      list: Список чатов
   layouts:
     application:
       name: Гермес
@@ -86,17 +87,46 @@ ru:
       sign_out: Выйти
       sign_in: Войти
       sign_up: Зарегестрироваться
-  subgroup:
-    subgroup:
-        delete: Удалить
-        edit: Редактировать
-        sure: Вы уверены?
-    form:
+  group:
+    group:
+    form: 
       name: Имя
-      subgroup: Подгруппа
+      group: Новая группа
       nickname: Никнейм
-    form_edit:
+    form_edit: 
       name: Имя
-      subgroup: Подгруппа
+      group: Редактирование группы
       nickname: Никнейм
+    show:
+      back: Назад
+      command: Имя команды
+      nickname: Никнейм
+      delete: Удалить
+      edit: Редактировать
+      sure: Вы уверены?
+    new: 
+      title: Новая группа
+    edit:
+      title: Редактирование группы
+  chat:
+    chat:
+    form: 
+      name: Имя
+      id: Телеграм id
+      chat: Новый чат
+    form_edit: 
+      name: Имя
+      id: Телеграм id
+      chat: Редактировать чат
+    show:
+      back: Назад
+      new_group: Новая группа
+      title: Список групп
+      delete: Удалить
+      edit: Редактировать
+      sure: Вы уверены?
+    new: 
+      title: Новый чат
+    edit:
+      title: Редактирование чата
 

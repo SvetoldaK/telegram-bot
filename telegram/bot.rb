@@ -17,6 +17,7 @@ Telegram::Bot::Client.run(token) do |bot|
     # rubocop:disable Style/RegexpLiteral
     command, text = message.text.match(/\/(\S+)\s*(.*)/)&.captures
     # rubocop:enable Style/RegexpLiteral
+    chat = message.chat.id
 
     # rubocop:disable
     if message.is_a?(Telegram::Bot::Types::ChatMemberUpdated)
@@ -26,8 +27,9 @@ Telegram::Bot::Client.run(token) do |bot|
       when 'start'
         bot.api.send_message(chat_id: message.chat.id, text: "Привет, #{message.from.first_name}")
       when command
-        if Subgroup.find_by(name: command)
-          bot.api.send_message(chat_id: message.chat.id, text: "#{Subgroup.find_by(name: command).nickname} #{text}")
+        if Group.find_by(name: command, chat_id: Chat.find_by(chat_id: chat).id)
+          bot.api.send_message(chat_id: message.chat.id, text: "#{Group.find_by(name:    command,
+                                                                                chat_id: Chat.find_by(chat_id: chat).id).nickname} #{text}")
         end
       end
     end

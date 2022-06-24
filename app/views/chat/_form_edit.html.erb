@@ -1,0 +1,22 @@
+<%= form_with model: @chat, url: user_chat_path(@chat.user_id, @chat) do |form| %>
+  <div>
+    <%= form.label t('.name') %><br>
+    <%= form.text_field :name %><br>
+    <% @chat.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label t('.id') %><br>
+    <%= form.text_area :chat_id %><br>
+    <% @chat.errors.full_messages_for(:chat_id).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit t('.chat')%>
+  </div>
+  
+<% end %>
