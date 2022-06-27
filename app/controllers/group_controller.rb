@@ -20,9 +20,12 @@ class GroupController < ApplicationController
   end
 
   def create
-    @group = Group.new(group_params)
-    @group.save!
-    redirect_to user_chat_path(current_user.id, @chat.id)
+    @group = Group.create(group_params)
+    if @group.valid?
+      redirect_to user_chat_path(current_user.id, @chat.id)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def destroy

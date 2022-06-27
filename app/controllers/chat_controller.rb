@@ -10,7 +10,7 @@ class ChatController < ApplicationController
 
   def update
     @user = User.find(@chat.user_id)
-    if @chat.update!(chat_params)
+    if @chat.update(chat_params)
       redirect_to user_path(@user)
     else
       render :edit, status: :unprocessable_entity
@@ -18,9 +18,12 @@ class ChatController < ApplicationController
   end
 
   def create
-    @chat = Chat.new(chat_params)
-    @chat.save!
-    redirect_to user_path(current_user.id)
+    @chat = Chat.create(chat_params)
+    if @chat.valid?
+      redirect_to user_path(current_user.id)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def destroy

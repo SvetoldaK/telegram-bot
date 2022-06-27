@@ -5,6 +5,16 @@
     </div>
     <div class="card-body">
       <%= form_with model: @group, url: user_chat_group_index_path(current_user.id, chat.id, @group.id) do |form| %>
+        <% if @group.errors.any? %>
+          <div style="color: red">
+            <ul>
+              <% @group.errors.each do |error|%>
+                <li><%= error.full_message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
         <div class="field">
           <%= form.hidden_field :chat_id, value: chat.id %>
         </div>
