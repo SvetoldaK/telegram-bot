@@ -4,11 +4,7 @@ en:
       sign_out: Sign Out
       sign_in: Sign In
       sign_up: Sign Up
-  users:
-    confirmations:
-      new:
-        email: Email
-        resending_instructions: Resend confirmation instructions
+  devise:
     mailer:
       confirmation_instructions:
         title: Welcome
@@ -31,6 +27,11 @@ en:
         body_lock: Your account has been locked due to an excessive number of unsuccessful sign in attempts.
         body_unlock: "Click the link below to unlock your account:"
         unlock: Unlock my account
+  users:
+    confirmations:
+      new:
+        email: Email
+        resending_instructions: Resend confirmation instructions
     sessions:
       new:
         sign_in: Sign In
