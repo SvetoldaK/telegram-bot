@@ -17,8 +17,6 @@ gem 'bootstrap'
 
 gem 'jquery-rails'
 
-gem 'cancancan'
-
 gem 'rails-i18n'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.3'
