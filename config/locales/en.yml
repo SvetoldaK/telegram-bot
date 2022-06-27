@@ -1,4 +1,9 @@
 en:
+  home:
+    index:
+      sign_out: Sign Out
+      sign_in: Sign In
+      sign_up: Sign Up
   users:
     confirmations:
       new:
@@ -86,18 +91,18 @@ en:
       eng: English
       rus: Russia
       sign_out: Sign Out
-      sign_in: Sign In
-      sign_Up: Sign Up
   group:
     group:
     form: 
       name: Name
       group: New group
       nickname: Nickname
+      title: New group
     form_edit: 
       name: Name
       group: Edit group
       nickname: Nickname
+      title: Edit group
     show:
       back: Back
       command: Command name
@@ -115,10 +120,12 @@ en:
       name: Name
       id: Telegram id
       chat: New chat
+      title: New chat
     form_edit: 
       name: Name
       id: Telegram id
       chat: New chat
+      title: Edit chat
     show:
       back: Back
       new_group: New group

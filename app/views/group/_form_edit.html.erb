@@ -1,27 +1,34 @@
-<%= form_with model: @group, url: user_chat_group_path(current_user.id, chat.id, @group.id) do |form| %>
-  
-  <div class="field">
-    <%= form.hidden_field :chat_id, value: chat.id %>
-  </div>
+<div class="col-lg-6 mx-lg-auto">
+  <div class="card shadow">
+    <div class="card-header">
+      <h2 class="card-title text-center"><%=t('.title')%></h2>
+    </div>
+    <div class="card-body">
+      <%=form_with model: @group, url: user_chat_group_path(current_user.id, chat.id, @group.id) do |form|%>
+        <div class="field">
+          <%= form.hidden_field :chat_id, value: chat.id %>
+        </div>
 
-  <div>
-    <%= form.label t('.name') %><br>
-    <%= form.text_field :name %><br>
-    <% @group.errors.full_messages_for(:name).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
+        <div class="form-group mb-2">
+          <%= form.label t('.name') %>
+          <%= form.text_field :name, autofocus: true, class: "form-control form-control-lg" %>
+          <% @chat.errors.full_messages_for(:name).each do |message| %>
+            <div><%= message %></div>
+          <% end %>
+        </div>
 
-  <div>
-    <%= form.label t('.nickname') %><br>
-    <%= form.text_area :nickname %><br>
-    <% @group.errors.full_messages_for(:nickname).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
+        <div class="form-group mb-2">
+          <%= form.label t('.nickname') %>
+          <%= form.text_field :nickname, autofocus: true, class: "form-control form-control-lg" %>
+          <% @chat.errors.full_messages_for(:nickname).each do |message| %>
+            <div><%= message %></div>
+          <% end %>
+        </div>
 
-  <div>
-    <%= form.submit t('.group')%>
+        <div class="actions">
+          <%= form.submit t('.group'), class: "btn btn-lg btn-primary" %>
+        </div>
+      <% end %>
+    </div>
   </div>
-  
-<% end %>
+</div>

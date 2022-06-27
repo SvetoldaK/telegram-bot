@@ -1,4 +1,9 @@
 ru:
+  home:
+    index:
+      sign_out: Выйти
+      sign_in: Войти
+      sign_up: Зарегестрироваться
   users:
     confirmations:
       new:
@@ -85,15 +90,15 @@ ru:
       eng: Английский
       rus: Русский
       sign_out: Выйти
-      sign_in: Войти
-      sign_up: Зарегестрироваться
   group:
     group:
     form: 
+      title: Новая группа
       name: Имя
       group: Новая группа
       nickname: Никнейм
     form_edit: 
+      title: Редактирование группы
       name: Имя
       group: Редактирование группы
       nickname: Никнейм
@@ -114,10 +119,12 @@ ru:
       name: Имя
       id: Телеграм id
       chat: Новый чат
+      title: Новый чат
     form_edit: 
       name: Имя
       id: Телеграм id
       chat: Редактировать чат
+      title: Редактирование чата
     show:
       back: Назад
       new_group: Новая группа
