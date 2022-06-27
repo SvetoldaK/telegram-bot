@@ -1,5 +1,6 @@
 class ChatController < ApplicationController
   before_action :set_chat, only: [:show, :edit, :destroy, :update]
+  before_action :authenticate_user!
 
   def edit; end
 

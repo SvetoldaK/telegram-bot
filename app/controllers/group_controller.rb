@@ -1,6 +1,7 @@
 class GroupController < ApplicationController
   before_action :set_group, only: [:show, :edit, :destroy, :update]
   before_action :set_chat
+  before_action :authenticate_user!
 
   def show; end
 
