@@ -4,7 +4,8 @@
       <h2 class="card-title text-center"><%=t('.title')%></h2>
     </div>
     <div class="card-body">
-      <%=form_with model: @group, url: user_chat_group_path(current_user.id, chat.id, @group.id) do |form|%>
+      <%= form_with model: @group, url: user_chat_group_path(current_user.id, chat.id, @group.id) do |form| %>
+
         <% if @group.errors.any? %>
           <div style="color: red">
             <ul>

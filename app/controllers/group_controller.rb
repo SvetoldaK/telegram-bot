@@ -12,7 +12,7 @@ class GroupController < ApplicationController
   end
 
   def update
-    if @group.update!(group_params)
+    if @group.update(group_params)
       redirect_to user_chat_path(current_user.id, @chat.id)
     else
       render :edit, status: :unprocessable_entity

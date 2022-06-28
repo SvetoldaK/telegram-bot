@@ -92,21 +92,20 @@ ru:
       rus: Русский
       sign_out: Выйти
   group:
-    group:
     form: 
       title: Новая группа
       name: Имя
       group: Новая группа
-      nickname: Никнейм
+      nickname: Никнейм(ы)
     form_edit: 
       title: Редактирование группы
       name: Имя
       group: Редактирование группы
-      nickname: Никнейм
+      nickname: Никнейм(ы)
     show:
       back: Назад
-      command: Имя команды
-      nickname: Никнейм
+      command: Название команды
+      nickname: Никнейм(ы)
       delete: Удалить
       edit: Редактировать
       sure: Вы уверены?
@@ -115,15 +114,14 @@ ru:
     edit:
       title: Редактирование группы
   chat:
-    chat:
     form: 
       name: Имя
-      id: Телеграм id
+      tg: Телеграм ID
       chat: Новый чат
       title: Новый чат
     form_edit: 
       name: Имя
-      id: Телеграм id
+      tg: Телеграм ID
       chat: Редактировать чат
       title: Редактирование чата
     show:

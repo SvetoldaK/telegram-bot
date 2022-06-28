@@ -25,8 +25,8 @@ Telegram::Bot::Client.run(token) do |bot|
     else
       case command
       when 'start'
-        bot.api.send_message(chat_id: message.chat.id, 
-        text: "Привет, #{message.from.first_name}. Зарегестрируйся на сайте (localhost:3000). Твой id Телеграм чата #{message.chat.id}")
+        bot.api.send_message(chat_id: message.chat.id,
+                             text:    "Привет, #{message.from.first_name}. Зарегестрируйся на сайте (localhost:3000). Твой id Телеграм чата #{message.chat.id}")
       when command
         if Group.find_by(name: command, chat_id: Chat.find_by(chat_id: chat).id)
           bot.api.send_message(chat_id: message.chat.id, text: "#{Group.find_by(name:    command,

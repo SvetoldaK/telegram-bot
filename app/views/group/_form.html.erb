@@ -5,6 +5,7 @@
     </div>
     <div class="card-body">
       <%= form_with model: @group, url: user_chat_group_index_path(current_user.id, chat.id, @group.id) do |form| %>
+      
         <% if @group.errors.any? %>
           <div style="color: red">
             <ul>
@@ -18,6 +19,7 @@
         <div class="field">
           <%= form.hidden_field :chat_id, value: chat.id %>
         </div>
+
         <div class="form-group mb-2">
           <%= form.label t('.name') %>
           <%= form.text_field :name, autofocus: true, class: "form-control form-control-lg" %>
