@@ -5,6 +5,7 @@
     </div>
     <div class="card-body">
       <%= form_with model: @chat, url: user_chat_path(@chat.user_id, @chat) do |form| %>
+      
         <% if @chat.errors.any? %>
           <div style="color: red">
             <ul>
