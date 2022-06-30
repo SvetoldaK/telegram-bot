@@ -18,7 +18,7 @@ Telegram::Bot::Client.run(token) do |bot|
       # rubocop:disable Style/HashSyntax
       when 'start'
         bot.api.send_message(chat_id: chat_id,
-                             text:    "Привет, #{message.from.first_name}. Зарегестрируйся на сайте (localhost:3000). Твой id Телеграм чата #{chat_id}")
+                             text:    "Привет, #{message.from.first_name}. Зарегестрируйся на сайте (localhost:3000). Твой id Телеграм чата: <#{chat_id}>")
       when command
         group = Group.find_by(name: command, chat_id: Chat.find_by(chat_id:)&.id)
         bot.api.send_message(chat_id: chat_id, text: "#{group.nickname} #{text}") if group
