@@ -124,3 +124,11 @@ Default: 100
 Что-то типа:
 
 "The code in this project is licensed under MIT license."
+
+sudo docker build . -t germes
+
+sudo docker run --rm -e POSTGRES_USER=svetalana -e POSTGRES_PASSWORD=12345 -e SECRET_KEY_BASE=12345 --add-host host.docker.internal:host-gateway --publish 3000:3000 germes
+
+sudo docker-compose build
+sudo docker-compose up
+
