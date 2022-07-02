@@ -1,6 +1,15 @@
-<%= link_to t('.back'), user_chat_path(current_user.id, @chat.id) %>
-<%= link_to t('.delete'), user_chat_group_path(current_user.id, @chat.id, @group.id),
-  method: :delete, data: { turbo_method: 'delete', turbo_confirm: t('.sure')}%> 
-<%= link_to t('.edit'), edit_user_chat_group_path(current_user.id, @chat.id, @group.id) %>
-<p><%= t('.command')%> <%= ": #{@group.name}" %></p>
-<p><%= t('.nickname')%> <%= ": #{@group.nickname}" %></p>
+<div class="card-title text-center">
+  <%= link_to t('.back'), user_chat_path(current_user.id, @chat.id), method: :get, class: "btn btn-lg btn-primary"  %>
+  <%= link_to t('.edit'), edit_user_chat_group_path(current_user.id, @chat.id, @group.id), method: :get, class: "btn btn-lg btn-primary"  %>
+  <%= link_to t('.delete'), user_chat_group_path(current_user.id, @chat.id, @group.id),
+    method: :delete, data: { turbo_method: 'delete', turbo_confirm: t('.sure')}, method: :get, class: "btn btn-lg btn-primary" %>
+</div>
+
+<div class="col-lg-4 mx-lg-auto">
+  <div class="card shadow">
+    <div class="card-header text-center">
+      <h2 class="card-title text-center"><%= "#{@group.name}" %></h2>
+      <p><%= t('.nickname')%> <%= ": #{@group.nickname}" %></p>
+    </div>
+  </div>
+</div>

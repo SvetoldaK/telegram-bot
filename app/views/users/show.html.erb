@@ -1,4 +1,9 @@
-<%= current_user.email %><br></p>
-<%= t('.list')%>
-<%= link_to t('.new_chat'), new_user_chat_path(@user) %>
-<%= render 'chat/chat' %>
+<div class="col-lg-4 mx-lg-auto">
+  <%= button_to t('.new_chat'), new_user_chat_path(@user), method: :get, class: "w-100 btn btn-lg btn-primary" %>
+    <div class="card shadow">
+      <div class="card-header text-center">
+        <h2 class="card-title text-center"><%=t('.list')%></h2>
+        <%= render 'chat/chat' %>
+      </div>
+    </div>
+</div>

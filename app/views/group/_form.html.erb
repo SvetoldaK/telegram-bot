@@ -1,20 +1,39 @@
-<%= form_with model: @group, url: user_chat_group_index_path(current_user.id, chat.id, @group.id) do |form| %>
-  <div class="field">
-    <%= form.hidden_field :chat_id, value: chat.id %>
-  </div>
+<div class="col-lg-6 mx-lg-auto">
+  <div class="card shadow">
+    <div class="card-header">
+      <h2 class="card-title text-center"><%=t('.title')%></h2>
+    </div>
+    <div class="card-body">
+      <%= form_with model: @group, url: user_chat_group_index_path(current_user.id, chat.id, @group.id) do |form| %>
+      
+        <% if @group.errors.any? %>
+          <div style="color: red">
+            <ul>
+              <% @group.errors.each do |error|%>
+                <li><%= error.full_message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
 
-  <div>
-    <%= form.label t('.name') %><br>
-    <%= form.text_field :name %><br>
-  </div>
+        <div class="field">
+          <%= form.hidden_field :chat_id, value: chat.id %>
+        </div>
 
-  <div>
-    <%= form.label t('.nickname') %><br>
-    <%= form.text_area :nickname %><br>
-  </div>
+        <div class="form-group mb-2">
+          <%= form.label t('.name') %>
+          <%= form.text_field :name, autofocus: true, class: "form-control form-control-lg" %>
+        </div>
 
-  <div>
-    <%= form.submit t('.group')%>
+        <div class="form-group mb-2">
+          <%= form.label t('.nickname') %>
+          <%= form.text_area :nickname, autofocus: true, class: "form-control form-control-lg" %>
+        </div>
+
+        <div class="actions">
+          <%= form.submit t('.group'), class: "btn btn-lg btn-primary" %>
+        </div>
+      <% end %>
+    </div>
   </div>
-  
-<% end %>
+</div>

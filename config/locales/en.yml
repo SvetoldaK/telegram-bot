@@ -1,9 +1,10 @@
 en:
-  users:
-    confirmations:
-      new:
-        email: Email
-        resending_instructions: Resend confirmation instructions
+  home:
+    index:
+      sign_out: Sign Out
+      sign_in: Sign In
+      sign_up: Sign Up
+  devise:
     mailer:
       confirmation_instructions:
         title: Welcome
@@ -26,6 +27,11 @@ en:
         body_lock: Your account has been locked due to an excessive number of unsuccessful sign in attempts.
         body_unlock: "Click the link below to unlock your account:"
         unlock: Unlock my account
+  users:
+    confirmations:
+      new:
+        email: Email
+        resending_instructions: Resend confirmation instructions
     sessions:
       new:
         sign_in: Sign In
@@ -86,18 +92,18 @@ en:
       eng: English
       rus: Russia
       sign_out: Sign Out
-      sign_in: Sign In
-      sign_Up: Sign Up
   group:
     group:
     form: 
       name: Name
       group: New group
       nickname: Nickname
+      title: New group
     form_edit: 
       name: Name
       group: Edit group
       nickname: Nickname
+      title: Edit group
     show:
       back: Back
       command: Command name
@@ -115,10 +121,12 @@ en:
       name: Name
       id: Telegram id
       chat: New chat
+      title: New chat
     form_edit: 
       name: Name
       id: Telegram id
       chat: New chat
+      title: Edit chat
     show:
       back: Back
       new_group: New group

@@ -15,6 +15,8 @@ gem 'dotenv'
 
 gem 'bootstrap'
 
+gem 'jquery-rails'
+
 gem 'rails-i18n'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.3'
@@ -68,7 +70,7 @@ end
 
 group :development do
   gem 'byebug'
-  gem 'letter_opener'
+  gem 'letter_opener_web'
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
 

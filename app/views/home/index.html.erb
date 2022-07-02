@@ -1,0 +1,12 @@
+<div class="col-lg-4 mx-lg-auto">
+  <div class="card shadow">
+    <div class="card-header text-center">
+      <% if !user_signed_in? %>
+        <%= button_to t('.sign_in'), new_user_session_path, method: :get, class: "w-50 btn btn-lg btn-primary" %><br>
+        <%= button_to t('.sign_up'), new_user_registration_path, method: :get, class: "w-50 btn btn-lg btn-primary" %>
+      <% else %>
+        <%= button_to t('.sign_in'), user_path(current_user.id), method: :get, class: "w-50 btn btn-lg btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

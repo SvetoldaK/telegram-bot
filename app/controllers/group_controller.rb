@@ -1,6 +1,7 @@
 class GroupController < ApplicationController
   before_action :set_group, only: [:show, :edit, :destroy, :update]
   before_action :set_chat
+  before_action :authenticate_user!
 
   def show; end
 
@@ -11,7 +12,7 @@ class GroupController < ApplicationController
   end
 
   def update
-    if @group.update!(group_params)
+    if @group.update(group_params)
       redirect_to user_chat_path(current_user.id, @chat.id)
     else
       render :edit, status: :unprocessable_entity
@@ -19,9 +20,12 @@ class GroupController < ApplicationController
   end
 
   def create
-    @group = Group.new(group_params)
-    @group.save!
-    redirect_to user_chat_path(current_user.id, @chat.id)
+    @group = Group.create(group_params)
+    if @group.valid?
+      redirect_to user_chat_path(current_user.id, @chat.id)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def destroy
