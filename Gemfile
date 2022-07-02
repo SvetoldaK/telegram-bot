@@ -70,7 +70,7 @@ end
 
 group :development do
   gem 'byebug'
-  gem 'letter_opener'
+  gem 'letter_opener_web'
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
 

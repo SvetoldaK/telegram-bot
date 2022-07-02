@@ -1,5 +1,23 @@
-<div>
- <% @chat.groups.each do |group| %>
-    <p><%= link_to "#{group.name}", user_chat_group_path(current_user.id, @chat.id, group.id) %></p>
- <%end%>
+<div class="table-responsive">
+   <table class="table table-striped table-sm">
+      <thead>
+      <tr>
+         <th>Name group</th>
+         <th>Nickname</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+         <td>
+            <% @chat.groups.each do |group| %>
+               <p><%= link_to "#{group.name}", user_chat_group_path(current_user.id, @chat.id, group.id) %></p>
+            <%end%>
+         </td>
+         <td>
+            <% @chat.groups.each do |group| %>
+               <p><%= "#{group.nickname}" %></p>
+            <%end%>
+         </td>
+      </tr>
+   </table>
 </div>
