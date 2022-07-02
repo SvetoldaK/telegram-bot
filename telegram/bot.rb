@@ -8,26 +8,22 @@ token = ENV.fetch('TOKEN', nil)
 
 Telegram::Bot::Client.run(token) do |bot|
   bot.listen do |message|
-    if Message.exists?(telegram_id: message.from.id)
-      Message.find_by(telegram_id: message.from.id)
-    else
-      Message.create(telegram_id: message.from.id, first_name: message.from.first_name)
-    end
-
-    # rubocop:disable Style/RegexpLiteral
-    command, text = message.text.match(/\/(\S+)\s*(.*)/)&.captures
-    # rubocop:enable Style/RegexpLiteral
+    chat_id = message.chat.id
 
     # rubocop:disable
-    if message.is_a?(Telegram::Bot::Types::ChatMemberUpdated)
-    # rubocop:enable
-    else
+    if message.is_a?(Telegram::Bot::Types::Message)
+      # rubocop:enable
+      command, text = message.text&.match(%r{/(\S+)\s*(.*)})&.captures
       case command
+      # rubocop:disable Style/HashSyntax
       when 'start'
-        bot.api.send_message(chat_id: message.chat.id, text: "Привет, #{message.from.first_name}")
-      when 'all'
-        bot.api.send_message(chat_id: message.chat.id, text: "#{Subgroup.find_by(name: 'all').nickname} #{text}")
+        bot.api.send_message(chat_id: chat_id,
+                             text:    "Привет, #{message.from.first_name}. Зарегестрируйся на сайте (http://127.0.0.1:3000). Твой id Телеграм чата: <#{chat_id}>")
+      when command
+        group = Group.find_by(name: command, chat_id: Chat.find_by(chat_id:)&.id)
+        bot.api.send_message(chat_id: chat_id, text: "#{group.nickname} #{text}") if group
       end
+      # rubocop:enable Style/HashSyntax
     end
   end
 end

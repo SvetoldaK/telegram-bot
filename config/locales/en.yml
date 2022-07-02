@@ -1,9 +1,10 @@
 en:
-  users:
-    confirmations:
-      new:
-        email: Email
-        resending_instructions: Resend confirmation instructions
+  home:
+    index:
+      sign_out: Sign Out
+      sign_in: Sign In
+      sign_up: Sign Up
+  devise:
     mailer:
       confirmation_instructions:
         title: Welcome
@@ -26,6 +27,11 @@ en:
         body_lock: Your account has been locked due to an excessive number of unsuccessful sign in attempts.
         body_unlock: "Click the link below to unlock your account:"
         unlock: Unlock my account
+  users:
+    confirmations:
+      new:
+        email: Email
+        resending_instructions: Resend confirmation instructions
     sessions:
       new:
         sign_in: Sign In
@@ -78,25 +84,57 @@ en:
         unlock: Resend unlock instructions
         email: Email
     show:
-      new_subgroup: New subgroup
+      new_chat: New chat
+      list: Chat list
   layouts:
     application:
       name: Germes
       eng: English
       rus: Russia
       sign_out: Sign Out
-      sign_in: Sign In
-      sign_Up: Sign Up
-  subgroup:
-    subgroup:
+  group:
+    group:
+    form: 
+      name: Name
+      group: New group
+      nickname: Nickname
+      title: New group
+    form_edit: 
+      name: Name
+      group: Edit group
+      nickname: Nickname
+      title: Edit group
+    show:
+      back: Back
+      command: Command name
+      nickname: Nickname
       delete: Delete
       edit: Edit
       sure: Are you sure?
+    new: 
+      title: New group
+    edit:
+      title: Edit group
+  chat:
+    chat:
     form: 
       name: Name
-      subgroup: Subgroup
-      nickname: Nickname
+      id: Telegram id
+      chat: New chat
+      title: New chat
     form_edit: 
       name: Name
-      subgroup: Subgroup
-      nickname: Nickname
+      id: Telegram id
+      chat: New chat
+      title: Edit chat
+    show:
+      back: Back
+      new_group: New group
+      title: Group list
+      delete: Delete
+      edit: Edit
+      sure: Are you sure?
+    new: 
+      title: New chat
+    edit:
+      title: Edit chat

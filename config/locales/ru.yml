@@ -1,31 +1,37 @@
 ru:
+  home:
+    index:
+      sign_out: Выйти
+      sign_in: Войти
+      sign_up: Зарегистрироваться
+  devise:
+    mailer:
+        confirmation_instructions:
+          title: Здравствуйте
+          body: "Вы можете подтвердить адрес электронной почты своей учетной записи по ссылке ниже: "
+          confirm_account: Подтвердить аккаунт
+        email_changed:
+          title: Здравствуйте
+          body: Мы связываемся с вами, чтобы уведомить вас о том, что ваш адрес электронной почты был изменен на
+        password_change:
+          title: Здравствуйте
+          body: Мы связываемся с вами, чтобы сообщить, что ваш пароль был изменен.
+        reset_password_instructions:
+          title: Здравствуйте
+          body_change: Кто-то запросил ссылку для смены пароля. Вы можете сделать это по ссылке ниже.
+          change_password: Изменить пароль
+          body_ignor: Если вы этого не запрашивали, проигнорируйте это письмо.
+          body_warning: Ваш пароль не изменится, пока вы не перейдете по ссылке выше и не создадите новый.
+        unlock_instructions:
+          title: Здравствуйте
+          body_lock: Ваша учетная запись заблокирована из-за чрезмерного количества неудачных попыток входа.
+          body_unlock: "Нажмите на ссылку ниже, чтобы разблокировать свою учетную запись:"
+          unlock: Разблокировать аккаунт
   users:
     confirmations:
       new:
         email: Почта
         resending_instructions: Отправить инструкцию повторно
-    mailer:
-      confirmation_instructions:
-        title: Здравствуйте
-        body: "Вы можете подтвердить адрес электронной почты своей учетной записи по ссылке ниже: "
-        confirm_account: Подтвердить аккаунт
-      email_changed:
-        title: Здравствуйте
-        body: Мы связываемся с вами, чтобы уведомить вас о том, что ваш адрес электронной почты был изменен на
-      password_change:
-        title: Здравствуйте
-        body: Мы связываемся с вами, чтобы сообщить, что ваш пароль был изменен.
-      reset_password_instructions:
-        title: Здравствуйте
-        body_change: Кто-то запросил ссылку для смены пароля. Вы можете сделать это по ссылке ниже.
-        change_password: Изменить пароль
-        body_ignor: Если вы этого не запрашивали, проигнорируйте это письмо.
-        body_warning: Ваш пароль не изменится, пока вы не перейдете по ссылке выше и не создадите новый.
-      unlock_instructions:
-        title: Здравствуйте
-        body_lock: Ваша учетная запись заблокирована из-за чрезмерного количества неудачных попыток входа.
-        body_unlock: "Нажмите на ссылку ниже, чтобы разблокировать свою учетную запись:"
-        unlock: Разблокировать аккаунт
     sessions:
       new:
         sign_in: Войти
@@ -40,7 +46,7 @@ ru:
         password: Пароль
         min_size: символов минимум
         password_confirmation: Подтверждение пароля
-        sign_up: Зарегестрироваться
+        sign_up: Зарегистрироваться
       edit:
         title: Редактировать
         email: Почта
@@ -69,7 +75,7 @@ ru:
     shared:
       links:
         log_in: Войти
-        sign_up: Зарегестрироваться
+        sign_up: Зарегистрироваться
         password: Забыли пароль?
         instruction_confirmation: Не подтверждена почта?
     unlocks:
@@ -77,26 +83,56 @@ ru:
         unlock: Повторно отправить инструкции по разблокировке
         email: Почта
     show:
-      new_subgroup: Новая подгруппа
+      new_chat: Новый чат
+      list: Список чатов
   layouts:
     application:
       name: Гермес
       eng: Английский
       rus: Русский
       sign_out: Выйти
-      sign_in: Войти
-      sign_up: Зарегестрироваться
-  subgroup:
-    subgroup:
-        delete: Удалить
-        edit: Редактировать
-        sure: Вы уверены?
-    form:
+  group:
+    form: 
+      title: Новая группа
       name: Имя
-      subgroup: Подгруппа
-      nickname: Никнейм
-    form_edit:
+      group: Новая группа
+      nickname: Никнейм(ы)
+    form_edit: 
+      title: Редактирование группы
       name: Имя
-      subgroup: Подгруппа
-      nickname: Никнейм
+      group: Редактирование группы
+      nickname: Никнейм(ы)
+    show:
+      back: Назад
+      command: Название команды
+      nickname: Никнейм(ы)
+      delete: Удалить
+      edit: Редактировать
+      sure: Вы уверены?
+    new: 
+      title: Новая группа
+    edit:
+      title: Редактирование группы
+  chat:
+    form: 
+      name: Имя
+      tg: Телеграм ID
+      chat: Новый чат
+      title: Новый чат
+    form_edit: 
+      name: Имя
+      tg: Телеграм ID
+      chat: Редактировать чат
+      title: Редактирование чата
+    show:
+      back: Назад
+      new_group: Новая группа
+      title: Список групп
+      delete: Удалить
+      edit: Редактировать
+      sure: Вы уверены?
+    new: 
+      title: Новый чат
+    edit:
+      title: Редактирование чата
 

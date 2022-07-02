@@ -1,0 +1,23 @@
+<div class="table-responsive">
+   <table class="table table-striped table-sm">
+      <thead>
+      <tr>
+         <th>Name chat</th>
+         <th>Telegram id</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+         <td>
+            <% @user.chats.each do |chat| %>
+               <p><%= link_to chat.name, user_chat_path(@user, chat.id) %></p>
+            <%end%>
+         </td>
+         <td>
+            <% @user.chats.each do |chat| %>
+               <p><%= chat.chat_id%></p>
+            <%end%>
+         </td>
+      </tr>
+   </table>
+</div>
